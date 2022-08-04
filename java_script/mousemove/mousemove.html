@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousemove</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            cursor: none;
+        }
+        body{
+            overflow: hidden;
+        }
+        img{
+            width: 100px;
+            position: absolute;
+        }
+        button{
+            display: block;
+            width: 100px;
+            height: 50px;
+            margin: 200px;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            mousemove : 마우스가 화면에서 움직일때 발상하는 이벤트
+
+            마우스  위치 지정 필요값
+            event.pageX 브러우저 화면을 기준으로 마우스의 X좌표위치
+            event.pageY 브러우저 화면을 기준으로 마우스의 Y좌표위치
+            
+            - window : 웹페이지 실행시켰을때 나오는 처음 화면을 객체화
+            */
+           $(window).mousemove(function(){
+            $("img").css({
+                left : event.pageX +1,
+                top : event.pageY +1
+            });
+           });
+
+           $("button").hover(function(){
+             $("img").attr('src','Finn_3.png')
+           },function(){
+             $("img").attr('src','Earl_1.png')
+           });
+           //////////////
+
+        });
+    </script>
+</head>
+<body>
+    <img src="Earl_1.png" alt="/">
+    <button type="button">버튼</button>
+</body>
+</html>

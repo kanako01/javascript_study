@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #btn{
+            width: 300px;
+            height: 50px;
+            display: block;
+            border:1px solid rgb(255, 153, 0);
+            background-color: aliceblue;
+            color: #191919;
+            margin: 10px;
+            margin-bottom: 0;
+        }
+        .box{
+            width: 300px;
+            padding: 100px 0;
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: 14px;
+            color: blue;
+            margin-left: 10px;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 동작 관련 효과
+
+            // show() + hide() =toggle (none+block)
+
+          // $("#btn").click(function(){
+           // $(".box").toggle('normal');
+          // });
+
+
+           // 시간 > slow(느리게), normal(보통), fast(빠르게)
+
+           //slideUp + slideDown = slideToggle(up+down 교차반복)
+           /*
+           $("#btn").click(function(){
+            $(".box").slideUp(); //height영향을 받아서 서서히 짧아지는 효과
+           });
+           $("#btn").dblclick(function(){
+            $(".box").slideDown(); //height 영향을 받아서 서서히 길어지는 효과
+           });
+           */
+
+          // $("#btn").click(function(){
+           // $(".box").slideToggle(normal);
+         //  });
+
+         // fadeIn + fadeOut = fadeToggle (in+out 교차) opacity
+
+         /*
+         $("#btn").click(function(){
+            $(".box").fadeOut(); //opacity의 영향을 받아서 서서히 사라지게 ~
+         });
+         $("#btn").dblclick(function(){
+            $(".box").fadeIn(); //opacity의 영향을 받아서 서서히 나타나게~
+         });
+
+         $("#btn").click(function(){
+            $(".box").fadeToggle();
+         });
+         */
+
+
+            ////////////////////////
+        });
+    </script>
+
+</head>
+<body>
+    <button type="button" id="btn">click</button>
+    <div class="box">
+        toggle<br/>
+        객체 안의 요소가 존재하는지 확인 후 제거<br/>
+        요소가 없을 시 추가하는 동작
+    </div>
+</body>
+</html>

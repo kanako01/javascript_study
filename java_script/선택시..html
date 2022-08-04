@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <h1>아이고 힘들다.</h1>
+    <h2 class="title">반갑습니다.</h2>
+    <ul id="menu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div id="aa">선택자입니다.</div>
+    <div class="bb">자바스크립트입니다요</div>
+
+    <script>
+    // 선택자
+   // document.querySelector("h1").style.color='#f00' >> //선택시 객체하나만 선택됌
+   // $("h1").css
+
+   let h1 = document.querySelectorAll("h1");
+   //console.log(h1);
+
+   // h1[1].style.color="#f00"  // >> 0부터 시작함 그래서 1이 두번째 h1
+
+   // 아이디 선택자
+    document.querySelector(".title").style.color="#00f"
+    document.getElementById("aa").style.fontSize='30px'
+    document.querySelector(".bb").style.fontWeight='900'
+
+
+   //여러개 선택자
+   /* let menu = document.querySelectorAll("#menu li");
+    
+    menu[0].style.color ='#f00'
+    menu[1].style.fontSize ='20px'
+    menu[2].style.fontWeight ='900'
+
+    ////////////////////////////////////////////////
+
+    for(let menu of document.querySelectorAll('#menu li')){
+        menu.style.color='#f00'
+    }
+    */
+
+    </script>
+</body>
+</html>

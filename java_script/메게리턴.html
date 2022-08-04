@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        매개변수 : 특정한 값을 입력 해서 함수에 전달하고 함수에서 그 값을 받아서 실행하는 것.
+        변수의 일종이며 함수 외부에서 함수 내부로 데이터를 전달할때 매개채 역할을 하는 변수이다.
+
+        function a(b){  a 라는 함수에 b 라는 한개의 매개변수를 전달.
+                실행문
+            }
+        a(변수b 값);
+        */
+
+       // function a(){
+       //    document.write(b*b,'<br/>')
+       //};
+       // a(3);
+
+       
+       // 숫자를 두개 넣을 때
+       // function (b,c){
+       //     document.write(b*c,'<br/>')
+       // };
+       // a(6,5);
+
+       /*
+       리턴 값 : 매개변수와 반대 되는 값
+       함수 내부에서 함수 외부로 전달하기 위해 사용하는 출력값이다.
+       함수 내부의 데이터를 함수를  호출한 곳으로 전달할 때 사용된다.
+
+       function a(b){ // a의 함수 매개변수 b를 받겠다고 알려줌
+        return (b*b); //  함수 a를 호출한 곳으로 b*b 를 가지고 돌아감
+       }
+       a(a(3));
+       */
+
+       function a(b){
+        return(b*b);
+       }
+       document.write(a(3));
+
+       function a(b,c){
+        return(b*c);
+       }
+       document.write(a(3,5));
+
+
+    </script>
+</body>
+</html>

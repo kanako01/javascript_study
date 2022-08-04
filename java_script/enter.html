@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #event{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            color: #fff;
+            margin: 100px;
+            font-size: 28px;
+            font-weight: 900;
+            text-align: center;
+            padding: 50px;
+        }
+        .inner{
+            width: 100%;
+            height: 100%;
+            background-color: darkblue;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            event : 웹상의 입력 가능한 요소를 (키보드 + 마우스 등)
+            이용해서 동작과 같은 행동을 했을때 미치는 시간
+
+            $("선택자").event(function(){실행문});
+
+            *마우스 관련 이벤트 종류
+            -mouseover 와 mouseenter의 차이점
+            (=두 이벤트 모두 마우스를 올렸을때 표현되는 성격이 띔)
+
+            :over 마우스가 요소의 안으로 들어왔을때 발생
+            :out 마우스가 요소를 벗어났을때 발생
+            -----------------------------------
+            :enter 마우스가 요소의 경계 외부에서 내부로 이동할떄 발생
+            :leave 마우스가  요소의 경계 내부에서 외부로 이동할떄 발생
+
+
+            */
+          /* $("#event").mouseenter(function(){
+            $("body").append("<h1>mouse추가 !!!!</h1>")
+           });
+       
+        */
+       $("#event").mouseenter(function(){
+        $("#event").css({backgroundColor:'#f00'})
+       })
+       .mouseleave(function(){
+        $("#event").css({backgroundColor:'#87ceeb'})
+       }); 
+       ////////////////////
+    });
+    </script>
+</head>
+<body>
+    <div id="event">
+        <div class="inner">
+            .event(function(){});
+        </div>
+    </div>
+</body>
+</html>

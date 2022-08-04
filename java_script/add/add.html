@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <style>
+       /* .add{
+            color: tomato;
+        }
+        .bg{
+            background-color: slategray;
+        }
+        .opa{
+            opacity: 0;
+        }
+        */
+        #btn{
+            width: 300px;
+            height: 100px;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 100px;
+            margin: 100px;
+            padding: 20px;
+            position: relative;
+        }
+        .tog{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            border-radius: 100px;
+            position: absolute;
+            top: 20px;
+            left: 220px;
+            transition: all 0.8s;
+        }
+        /* toggleclass를 응용하여 버튼을 클릭했을때 지정된 스타일*/
+        
+        .tog_r{
+            top: 20px;
+            left: 20px;
+            background-color: aquamarine;
+            transition: all 0.8s;
+        }
+    </style>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+           /* $("h1").on('click',function(){
+                $("h1").addClass("bg")
+            }).on('click',function(){
+                $("p").addClass("add")
+            });*/
+           // $("h1").addClass('add');
+           // $("h1").addClass('bg');
+           // $("h1").removeClass('add');
+            // addClass >> 클래스를 추가해주는  메서드 
+            // 스탙일 상에 저장된 class를 넣어야하는 것은 아님!
+
+            $("#btn").on('mouseover',function(){
+                $(".tog").toggleClass("tog_r")
+            }).on('mouseout',function(){
+                $(".tog").toggleClass("tog_r")
+            });
+
+
+            $("h1").on('click',function(){
+
+                if ($("ul li").hasClass("hass")){
+                    $("li:nth-child(3)").css({color:'#f00'});
+                } else {
+                    $("li:nth-child(3)").css({color:'#ff0'});
+                }
+
+            });
+
+
+            $("h2").on('click',function(){
+                //attr 속성에 접근하게 하는 메서드
+                $("img").attr('src','c1.jpg');
+                //속성을 제거 하는 메서드 attr - removeAttr
+                //$("img").removeAttr('src','c2.jpg');
+            });
+
+
+
+
+            //////////////////
+        });
+    </script>
+</head>
+<body>
+   <!-- <h1>.addClass()</h1>
+    <p>
+        선택한 요소에 클래스를 추가
+    </p>
+    -->
+    <h1>.toggleClass</h1>
+    <p>
+        선택한 요소에 클래스의 추가/제거 반복
+        add+remove의 반복
+    </p>
+    <div id="btn">
+        <div class="tog"></div>
+    </div>
+
+    <h1>hasClass</h1>
+    <p>
+        선택한 요소에 주어진 클래스가 있는지 확인하는 메서드로 
+        확인 후 참과 거짓으로 구분, 존재하면 참 없으면 거짓으로 반환
+    </p>
+
+    <ul>
+        <li class="hass">hasClass</li>
+        <li>hasClass</li>
+        <li>hasClass</li>
+        <li>hasClass</li>
+        <li>hasClass</li>
+        <li>hasClass</li>
+    </ul>
+
+    <h2>속성접근메서드 .attr()</h2>
+       <img src="c1.jpg" alt="/">
+       <img src="c2.jpg" alt="/">
+</body>
+</html>

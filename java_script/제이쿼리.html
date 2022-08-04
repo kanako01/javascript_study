@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <!--스크립트를 연결하는 방법 1.cdn 2.src다운-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+        $ = 제이쿼리에 접근하게 해줄수 있는 요소
+        선택자를 이용하고자 할때 선택의 요소를 표현하게 해줌
+        $(선택자) / ""       예약어 ,변수를 담을때는 "" 생략
+
+        ; = 종결, 종료, 구분
+        
+        $(document).ready(function(){ 코드작성>>내용물  });
+        */
+       $(document).ready(function(){
+        // >> 주석처리 .css() : 스크립트에서 표현가능한 스타일 메서드
+        // $("선택자").css('속성','값');
+        //   ㄴ명령대상     ㄴ명령내용
+        $("h1").css('color','#f00');
+        $("li").css('font-weight','900');
+
+        // 여러개의 속성을 부여할때 > {}
+        $('h1').css({
+            'background-color':'#ff0',
+            'width':'800px',
+            'line-height':'300px',
+            'text-align':'center',
+            'margin-top':'100px'
+        });
+
+        // 여러개의 속성을 작성하며 따옴표를 제거하는 방법 = > 구분대문자
+          // 뒤 자리 단어의 첫글자 대문자
+        $("li").css({
+            backgroundColor:'#ff0',
+            color:'#0ff',
+            lineHeight:'50px',
+            textAlign:'center',
+            listStyle:'none',
+            width:'1000px'
+        });
+
+        ///////////////////////>> 주석처리로 document 표시
+       });
+    </script>
+</head>
+<body>
+    
+    <h1>제이쿼리 : 오픈소스의 기반의 자바스크립트의 라이브러리</h1>
+    <ul>
+        <li>간편하게 오픈소스를 무료로 구할수 있음.</li>
+        <li>문서의 내용을 쉽게 다룰 수 있음.</li>
+        <li>css또한 쉽게 적용가능.</li>
+        <li>웹브라우저의 구버전까지 적용가능</li>
+        <li>애니메이션 효과나 대화형 처리를 간단하게 적용가능</li>
+        <li>다양한 플러그인과 참고할수 있는 문서가 많다.</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".f1").on('mouseover',function(){
+                $('.f1>.on').css({
+                opacity:'0%'
+                });
+            });
+            $(".f1").on('mouseout',function(){
+                $('.f1>.on').css({
+                opacity:'100%'
+                });
+            });
+
+            $(".f2").on('mouseover',function(){
+                $('.f2>.on').css({
+                opacity:'0'
+                });
+            }).on('mouseout',function(){
+                $("f2>.on").css({opacity:'1'});
+            })
+            
+            //mouseover+out을 이용해서
+            //mouseover: 마우스를 올려놨을때
+            //mouseout : 마우스가 벗어났을때(원래대로)
+            //이벤트만이 중요한 것이 아니라 구현하고자 하는 동작에 맞는
+            //css가 부여되어야함
+            ////////////////////
+        });
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            transition: all 0.8s;
+        }
+        img{
+            display: block;
+        }
+        #all{
+            width: 816px;
+            overflow: hidden;
+            margin: 150px auto;
+            box-sizing: 0 0 15px #333;
+        }
+        .f1,.f2{
+            width: 408px;
+            height: 302px;
+            float: left;
+            position: relative;
+        }
+        .f1>img,.f2>img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>  
+<body>
+    <div id="all">
+        <div class="f1">
+            <img src="view01.jpg" alt="/">
+            <img src="view02.jpg" alt="/" class="on">
+        </div>
+        <div class="f2">
+            <img src="view03.jpg" alt="/">
+            <img src="view04.jpg" alt="/" class="on">
+        </div>
+    </div>
+</body>
+</html>

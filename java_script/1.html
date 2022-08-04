@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        console.log("hello world");
+
+        // 변수 : 처리대상이 되는 값이나 결과를 임시로 저장하는 공간
+        //        빈 그릇이 만들어지는 데이터 공간
+
+        // 변수(변하는 숫자) 상수(변하지 않는 숫자)
+        //      let              const    es6  (es5 var는 쓰면 안됌)    
+
+        // let 변수명 ; >> 빈 그릇을 생성하는 시점
+        // 변수명 = 데이터 ; >> 데이터를 저장하는 시점
+
+        // let 변수명 = 데이터; >> 빈 그릇 생성하면서 데이터 저장
+
+        /*let name = " kim";
+        console.log(name);*/
+
+        //호출을 먼저 하고 나서 선언을 해도 오류가 안뜸 == let 에서는 말오 안됌
+        // >>>>  근 데 var에서는 가능 
+
+      /*  console.log(name);
+        var name = " kim";*/
+
+        //보안상의 문제가 있다.
+        
+        //const >> 한번 할당하면  절대 값이 바뀌지 않는 상수
+        //좋은 이유 : 보안, 호환성 , 코드변경시 실수 방지
+
+        /*
+        주의사항
+        1.한글은 절대 쓰지 않난다
+        2.띄어쓰기 않는다.
+        3.대소문자를 구분한다.
+        4.첫글자는 숫자를 사용하지 않는다.
+        5.예약어를 사용하지 않는다 (document,window . . . )
+
+
+
+        1)출력방법
+
+        1. 문자객체 >> ""  , '' 작성하며 표현, 따옴표에 둘러싸인 문자의 집합을 의미
+        2.숫자 >> 10  따옴표를 작성하지 않고 표현 , 연산의  의미와 목적으로 사용
+        3.불리언 >> 참과 거짓 
+
+
+        2)문서에 쓰는 방식
+        document.write("문서에 쓰는 방식") 테스트용 표현 !
+        
+        >> document.write("안녕하세요");
+           document.write("<br/>");
+           document.write("반갑습니다.");
+
+
+        alert ("경고창을 띄우는 방식")
+        prompt ("텍스트가 입력가능한 창을 띄우는 방식")
+        
+        >> prompt('데이터값은?','');
+
+        3)type 작성시 주의 !
+
+        " 안녕하세요"반갑습니다." " >>  중복사용 x
+        "안녕하세요.'반갑습니다.' " >>   교차가능
+        ` >>>> 쌍따옴표 중복을 쓰고 싶을때 씀 ㅠ 
+        
+        document.write(`"안녕하세요"반값습니다""`);
+
+*/
+        //연산자 
+
+        //산술연산자(사칙연산) : 사칙연산을 다루는 가장 기본적이면서도  
+        //많이 사용되는 연산자  + _ * /
+
+        //document.write(10+10,'<br/>') 덧셈
+       // document.write(20-10,'<br/>') 뺄셈
+        //document.write(20*10,'<br/>') 곱셉
+        //document.write(20/10,'<br/>') 나눗셈
+        //document.write(10%3); 나머지 연산자 
+
+        //숫자 : 연산이 표현 (덧셈)  //문자 : 문자열이 연결되게 표현
+        //document.write("문자"+"연결"+"표현");
+
+        //document.write((20+10)*3);
+
+
+
+        //대입연산자 : 변수에 값을 대입할때 사용하는 이항 연산자이며
+        //피연산자들의 결함 방향은 오른쪽에서 왼쪽이다.
+
+        /*
+
+        = : 데이터를 대입
+        += : 더한값을 대입
+        -= : 뺀값을 대입
+        *= : 곱센값을 대입
+        /= : 나눈값을 대입
+        %= : 나머지값을 대입
+
+        */
+
+
+        /*
+        let num = 10;
+        document.write(num+'<br/>')
+        num += 5;
+        document.write(num+'<br/>')
+        num -= 5;
+        document.write(num+'<br/>')
+        num *= 5;
+        document.write(num+'<br/>')
+        num /= 5;
+        document.write(num+'<br/>')
+        num %= 3;
+        document.write(num+'<br/>')
+        */
+
+
+        /*
+
+        // *<a>태그로 주소연결하기
+        let link = '';
+        link += '<a href="http://www.naver.com/">'
+        link += '네이버'
+        link += '</a>'
+        document.write(link);
+
+        */
+
+        //증감연산자 : 피연산자를 1씩 증가 하거나 1씩 감소하는 연산자
+        // 피연산자가 단 하나뿐인 단항 연산자
+        // 증감연산자는 해당 연산자가 피연산자의 어느쪽에 위치하는가에 따라 순서 및 결과가 달라진다.
+
+
+        /*
+        let a = 1;
+        a++;
+        document.write(a,'<br/>');
+        ++a;
+        document.write(a);
+
+        */
+       let a = 1;
+       let b = ++a;
+       document.write('a='+a,'b='+b,'<br/>');
+       
+        //  >>> 계산 먼저 하고 나중에 대입 
+    //전위연산자를 사용하는 변수 a는 자기자신을 먼저 증가 시킨후 좌측 변수 b에 대입하므로 a와b의 값이 같다.
+
+       let c = 1;
+       let d = c++;
+       document.write('c='+c,"d="+d,"<br/>");
+       // >>> 나중에 계산함 , c를 먼저 대입하고 계산은 나중에
+    //후위연산자를 사용하는 변수 c는 좌측변수 d에 대입한 후 자기자신을 증가 시키므로 c와d의 값이 다르다.
+
+
+
+    // 비교연산자 : 크다 , 작다, 작거나 같다 , 크거나 같다 , 같다 , 다르다 .
+    // 연산이 맞으면 true(참) , 틀리면 false(거짓)을 반환 (데이터타입 boolean)
+
+    document.write(30>20,'<br/>');
+    document.write(30<20,'<br/>');
+    document.write(30<=20,'<br/>');
+    document.write(30>=20,'<br/>');
+    document.write(30==20,'<br/>');
+    document.write(30!=20,'<br/>'); // 다르다 !
+
+
+    document.write(20 == '20','<br/>') // 데이터값이 20으로 같으므로 true
+    document.write(20 === '20','<br/>') // 데이터값이 20으로 동일하지만 데이터 타입이 다르므로 false
+    document.write(20 !='20','<br/>')  // 데이터 값이 20으로 같으니 false
+    document.write(20 !=='20','<br/>')  // 데이터 값이 20으로 같으나 데이터 타입이 다르므로 true
+
+    //true = 1 , false = 0
+
+    let q = 20>10 //true
+    let w = 20<10 //false
+    document.write(q>w,"<br/>");
+
+
+    document.write('가방'>'하마')
+    //비교연산자로 문자열 비교시 국어사진의 앞쪽에 있을수록 값이 작다.
+
+    /*
+
+    논리연산자 : 비교연산자 등으로 반환된 참과 거짓을 조합하여 결과를 반하는 연산자 
+     &&(논리곱)연산자 ||(논리합)연산자는 두개의 피연산자를 가지는 이항연산자이며 , 
+    피연산자들의 방향은 왼쪽에서 오른쪽이다.
+    !(논리부정) 연산자는 피연산자가 단 하나뿐인 단항연산자이며 , 피연산자의 결함 방향은 오른쪽에서 왼쪽이다.
+
+
+    ||(논리합연산자 or)
+    참 || 참 : 참
+    참 || 거짓 : 참
+    거짓 || 참 : 참
+    거짓 || 거짓 : 거짓
+
+    >> 둘 중에 하나만 맞아도 괜찮음
+
+    &&(논리곱연산자 and)
+    참 && 참 : 참
+    참 && 거짓 : 거짓
+    거짓 && 참 : 거짓
+    거짓 && 거짓 : 거짓
+
+    >두개의 조건이 다맞아야람 
+    */
+   
+    document.write(30>20 || 10>20,'<br/>'); //참
+    document.write(30>20 && 10>20,'<br/>'); //거짓
+
+    document.write(!(20>10))
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <!--
+        defer >> 맨 마지막에 js 파일 입력 (가장 많이 사용)
+        async >> 트리형태로 입력중에 js 파일을 다운로드 될때까지 
+                 기다렸다가 다운로드 되면 다시 입력
+
+    -->
+    <!--<h1>안녕하세요.</h1>
+    <script>
+        let title = document.querySelector("h1");
+        title.style.color="#f00";
+      </script>-->
+
+      
+</body>
+</html>

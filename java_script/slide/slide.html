@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            display: block;
+        }
+        .slide{
+            width: 600px;
+            height: 600px;
+            overflow: hidden;
+            margin: 100px auto;
+        }
+        .imgbox{
+            display: flex;
+            transition: all 0.8s linear;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="imgbox" id="img">
+            <img src="img1.jpg" alt="/">
+            <img src="img2.jpg" alt="/">
+            <img src="img3.jpg" alt="/">
+        </div>
+    </div>
+    <script>
+        const imgs = document.getElementById("img");
+        const img = document.querySelectorAll("#img img");
+        
+        let i = 0;
+
+        function slide(){
+            i++;
+
+            if(i>img.length-1){
+                i=0;
+            }
+            imgs.style.transform =`translate(${-i*600}px)`;
+        };
+
+        setInterval(slide,2000);
+
+
+    </script>
+</body>
+</html>

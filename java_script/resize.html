@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resize</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            width: 100%;
+            background-color: #f00;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            resize(); 창 크기의 변화가 있을때 이벤트가 발생
+            = 창크기 기준
+            outerWidth ; 화면의 전체 폭을 
+            */
+           $(window).resize(function(){
+            let res = outerWidth;
+            if(res<=800){
+                $("h1").css({width:'100px'});
+            }else{
+                $("h1").css({width:'100%'});
+            }
+           });
+
+            //
+        });
+    </script>
+</head>
+<body>
+    <h1>.resize();</h1>
+</body>
+</html>

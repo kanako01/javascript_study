@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if조건문</title>
+    <script>
+        /*
+        if조건문 > (조건문 : 주어진 표현식의 결과에 따라 별도의 명령을 수행하도록
+        제어하는 실행문)
+
+        조건에 해당하는 기준을 두고 실행과정을 나누거나 같은 처리를 반복 실행하는 경우 사용
+
+        조건이 참일 경우 실행문이 실행
+        if(조건) { 실행문 }
+
+
+
+
+
+        */
+       if(20>10){//거짓일 경우 구문이 종료
+        alert("참으로 실행!!");
+       }
+
+       let dt = new Date(); //웹브라우저의 실행되어지는 표준시간대를 가져옴
+       let hr = dt.getHours(); // 시간만 가져오는 구문
+
+       console.log(hr);
+
+    // if(hr<12){
+    //   alert("지금은 오전입니다.");
+    // }
+    // if(hr>=12){
+    //   alert("지금은 오후입니다.");
+    // }
+
+    /*
+
+    if else문 : 표현식이 결과가 참과 거짓임에 따라 주어진 실행문을 실행
+    >>if(조건) {조건이 참이면 실행} else {조건이 거짓이면 실행}
+
+    */
+
+   /*
+    if(2>10){
+        alert("참이면 실행")
+    } else {
+        alert("거짓이면 실행")
+    }
+    */
+
+    /*
+    if(hr<12) {
+        alert("지금은 오전입니다.")
+    } else {
+        alert("지금은 오후입니다.")
+    }
+    */
+
+
+   /*
+   if else if : 조건이 겹치지 않는 세가지 이상으르 나눌 떄 사용
+
+   if(조건1) {
+    조건 1이 참이면 실행 거짓이면 조건 2
+   } else if(조건2) {
+    조건 2가 참이면 실행 거짓이면 조건 3
+   } else if(조건3) {
+    조건 3이 참이면 실행 거짓이면 최종으로 
+   } else {
+    위의 모든 조건이 거짓일 경우 최종 실행 후 종류
+   }
+   
+   */
+
+   /*
+  if(10>10) {
+    alert("조건1이 참이면 실행 거짓이면 조건2로")
+  } else if(10!==10) {
+    alert("조건2가 참이면 실행 거짓이면 조건3으로")
+  } else if(10===10) {
+    alert("조건3이 참이면 실행 거짓이면 최종으로")
+  } else {
+    alert("위의 모든 조건이 거짓일 경우 최종 실행 후 종료")
+  }*/
+
+  const score = Number(prompt('학점을 입력해주세요.',''))
+
+  /*if(score === 4.5){
+    alert("god")
+  } else if(4.2 <= score && score < 4.5) {
+    alert("여신의 뽀뽀")
+  } else if (3.5 <= score && score < 4.2) {
+    alert("너 칭찬해")
+  } else if(2.8 <= score && score < 3.5) {
+    alert("일반인 ㅜ")
+  } else if(2.3 <=score && score < 2.8) {
+    alert("엉덩이를 탁하면 올라갈수 있어")
+  } else if(1.7 <=score && score < 2.3) {
+    alert("너너너 진짜 이럴래 실망스러워")
+  } else{ 
+    alert("시대를 앞서가는 존재")
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

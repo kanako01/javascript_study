@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 반복문</title>
+
+</head>
+<body>
+    <script>
+
+       /*
+       for문 : 반복 횟수가 정해진 경우 주로 사용 (반복은 반복인데 횟수에 반복)
+       
+      >>> for(초기화; 반복조건식; 증감식(반복실행조건)){
+             실행문
+          }
+
+       01. 초기식을 실행(for문이 실행될 때 제일 처음 한번만 실행)
+       02. 조건식을 비교해서 참일 경우 
+       03. 실행문 실행
+       04. 증감식으로 가서 수치 1을 더함
+       05. 또 다시 조건식을 비교하면서 실행문을 실행시킴
+       ...(반복)
+       06. 조건식이 거짓일 경우 for문을 종료하고 빠져나옴
+       
+
+       */
+      
+       /*
+       for(let i = 0; i<10; i++){ //초기화값은 시작값이라서 한번만 필요 >> 후에 조건식참 이면 i++(증감) = 2...
+        document.write("안녕하세용<br/>")
+       }
+       */
+
+       for(let i = 0; i <=20; i+=2){
+        document.write(i+'<br/>')
+       }
+
+     
+    </script>
+</body>
+</html>

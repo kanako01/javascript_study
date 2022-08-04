@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #img{
+            width: 60%;
+            overflow: hidden;
+            margin: 150px auto;
+        }
+        #img>div{
+            width: 33.3%;
+            text-align: center;
+            float: left;
+            position: relative;
+            height: 800px;
+
+        }
+        #img>div>img{
+            width: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        #main{
+            width: 500px;
+            margin: 50px auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        form{
+            width: 500px;
+            text-align: center;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+    </style>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //find - 자손요소에 숨은 인자를 찾아서 가져오는 매서드
+            $("#main").find("p").css({color:'#f00',fontSize:'30px'});
+
+            $("#main>a").on('click',function(){
+                $("#main").find(".text").css({color:'#00f'});
+            });
+
+            $("#main").find("h1,p").css({color:'#333'});
+
+              ///////////////////////////
+
+              //.first() 요소중에 첫번째 인자를 선택하는 메서드
+
+              $("button").first().css({
+                border:'none',
+                backgroundColor:"#000",
+                color:'#fff',
+                padding:'10px 30px'
+              });
+
+              // last() 요소 중에서 마지막 번째 인자를 선택하는 매서드
+
+              $("button").last().css({
+                border:'none',
+                backgroundColor:"#ccc",
+                color:'#fff',
+                padding:'10px 30px'
+              });
+
+              //.filter() 요소중에서 전달받은 요소를 선택하는 매서드
+
+              $("button").filter(":nth-child(2)").css({
+                border:'none',
+                backgroundColor:"#808080",
+                color:'#fff',
+                padding:'10px 30px'
+              });
+
+
+
+              //01버튼을 클릭했을때 img1안의 이미지가 수직상으로 700px 이동,0.8초동안
+              //find + f/l/f
+              $("button").first().on('click',function(){
+                $(".img1").find("img").stop(true).animate({top:'700px'},800,'linear');
+              });
+              //02버튼을 클릭했을때 img2안의 이미지가 수직상으로 700px 이동,0.8초동안
+              $("button").filter(":nth-child(2)").on('click',function(){
+                $(".img2").find("img").stop(true).animate({top:'700px'},800,'linear');
+              });
+              //03버튼을 클릭했을때 img3안의 이미지가 수직상으로 700px 이동,0.8초동안
+              $("button").last().on('click',function(){
+                $(".img3").find("img").stop(true).animate({top:'700px'},800,'linear');
+              });
+              ///////////////////////////
+        });
+    </script>
+</head>
+<body>
+    <div id="img">
+        <div class="img1"><img src="rs01.png" alt="/"></div>
+        <div class="img2"><img src="rs02.png" alt="/"></div>
+        <div class="img3"><img src="rs03.png" alt="/"></div>
+    </div>
+    <form>
+        <button type="button">01</button>
+        <button type="button">02</button>
+        <button type="button">03</button>
+    </form>
+    <div id="main">
+        <p>.find()</p>
+        <span>:요소의 자손요소에 숨은 인자를 전달받아 탐색하는 매서드</span><br/>
+        <a href="#">응용표현</a>
+        <h3 class="text">응용표현2</h3>
+    </div>
+</body>
+</html>

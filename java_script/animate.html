@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //animate = 애니메이션 동작을 부여할수 있는 메서드
+            //시간에 대한 속도를 부여할 수 있음
+            //이징효과 
+            //$("선택자").animate({ 실행내용 },시간,'이징효과')
+            //1000 = 1초 2000 = 2초 500  = 0.5초 (밀리초 단위)
+            //animate () 기본제이쿼리에는 색상, 이징효과에 대한 스크립트가 없기 때문에
+            // ui라는 확장라이브러리를 연결해서 사용 !
+          // $("h1").on('click',function(){
+            //    $("h1").animate({
+              //      color:'#f00',
+                //    backgroundColor:'#00f'
+               // });
+           // });
+            // h1에 마우스를 올렸을때 배경색이 빨강색 마우스가 벗어날때는 원래색
+            $("h1").on('mouseover',function(){
+                $(this).stop(true).animate({ backgroundColor:'#f00'},1000,'linear');
+            }).on('mouseout',function(){
+                $(this).stop(true).animate({ backgroundColor:'blue'},1000,'linear')
+            });
+            //animate에서 이벤트의 실행시점은 쌓이는 성격을 가지고 있기 때문
+            //.stop(true) animate 앞쪽에 붙여서 사용
+
+
+            //선택자에서 ~개별적인 요소를 선택해라 ! >> this
+            ////////////////////
+        });
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            width: 10%;
+            padding-bottom: 10%;
+            background-color: blue;
+            color: #fff;
+            float: left;
+            margin: 1%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+    <h1>.animate()</h1>
+   
+</body>
+</html>

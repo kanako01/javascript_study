@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        h1{
+            width: 500px;
+            height: 300px;
+            background-color: aqua;
+            position: fixed;
+        }
+        p{
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+            position: absolute;
+            top: 800px;
+            left: 100px;
+            opacity: 0;
+        }
+        h2{
+            width: 300px;
+            height: 200px;
+            background-color: rgb(0, 255, 21);
+            position: absolute;
+            top: 1000px;
+            left: 100px;
+            opacity: 0;
+        }
+
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            scroll : html 문서가 스크롤 될때 발생하는 이벤트
+            scrollTop : 윈도우 브라우저의 스크롤 위치값(원래의 값, 기준, 이동)
+            속성으로도 사용가능 (요소의 스크롤 위치를 확인, 스크롤 수직위치)
+            
+            */
+
+          // 제이쿼리 시에는 let 변수 함수를 넣지 못한다
+          // 사라지는 거 해보기 내일 한대요 옾셋
+            
+           //$(window).scroll(function(){
+          //  if($(this).scrollTop()>300){
+           //     $("h1").animate({opacity:'0'},300);
+           //     $("p").animate({opacity:'1',left:'600px'});
+          //  }
+          // });
+           $(window).scroll(function(){
+            if($(this).scrollTop(150)){
+              $("h2").animate({opacity:'1',left:'600px'})
+            }
+           });
+          
+           
+
+           //
+        });
+    </script>
+</head>
+<body>
+    <h1>300기준 = 사라지게</h1>
+    <p>300기준 = 나타나게</p>
+    <h2>위치를 잡아 보쟈고</h2>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머함수</title>
+</head>
+<body>
+    <script>
+        /*
+        타이머함수 : 특정한 시간에 특정한 함수를 실행하는 함수
+        1.setTimeout : 일정 시간 후 함수를 한번 실행.
+        2.setInterval : 일정 시간마다 함수를 반복해서 실행.
+        */
+
+        //1)setTimeout
+        let st = setTimeout(function(){
+            document.write("현재 시간과 날짜는?" + new Date());
+        },200);
+
+        // clearTimeout : setTimeout의 함수가 실행되는 것을 제거
+        clearTimeout(st);
+
+        //2) setInterval
+        let si = setInterval(function(){
+            document.write("1초에 한번씩 !!!!!!!<br/>");
+        },1000);
+
+        //clearInterval : setInterval 동작을 제거
+        clearInterval(si)
+
+        // 결합 응용 1초마다 한번씩 글이 나타나게  5초 후에 멈추게 !
+
+        
+           let ssi = setInterval(function(){
+            document.write('1초당 한번씩 !!!!<br/>')
+           },1000);
+        
+           setTimeout(function(){
+            clearInterval(ssi)},5000);
+    </script>
+</body>
+</html>
